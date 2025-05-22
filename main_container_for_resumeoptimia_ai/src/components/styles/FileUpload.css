@@ -1,0 +1,133 @@
+.file-upload-container {
+  background-color: var(--kavia-dark);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.file-upload-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.upload-area {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.upload-area.dragging {
+  border-color: var(--kavia-orange);
+  background-color: rgba(232, 122, 65, 0.05);
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.upload-area p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+}
+
+.upload-format {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.upload-btn {
+  background-color: transparent;
+  border: 1px solid var(--kavia-orange);
+  color: var(--kavia-orange);
+  margin-top: 16px;
+}
+
+.upload-btn:hover {
+  background-color: rgba(232, 122, 65, 0.1);
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.or-divider:before,
+.or-divider:after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.or-divider span {
+  padding: 0 10px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.loading-indicator {
+  margin-top: 16px;
+  color: var(--text-secondary);
+}
+
+.error-message {
+  margin-top: 16px;
+  color: #dc3545;
+}
+
+.file-info {
+  margin-top: 16px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.paste-container {
+  margin-top: 32px;
+}
+
+.paste-container h3 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.resume-textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.resume-textarea:focus {
+  outline: none;
+  border-color: var(--kavia-orange);
+}
+
+.analyze-btn {
+  background-color: var(--kavia-orange);
+  padding: 12px 24px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.analyze-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
