@@ -1,0 +1,211 @@
+.optimization-panel-container {
+  background-color: var(--kavia-dark);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.optimization-panel-container h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--text-color);
+}
+
+.job-targeting-section {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.job-targeting-section h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.job-selector {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.job-select {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.job-select:focus {
+  outline: none;
+  border-color: var(--kavia-orange);
+}
+
+.view-job-btn {
+  background-color: transparent;
+  border: 1px solid var(--kavia-orange);
+  color: var(--kavia-orange);
+}
+
+.view-job-btn:hover {
+  background-color: rgba(232, 122, 65, 0.1);
+}
+
+.job-description {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.job-description h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--kavia-orange);
+}
+
+.job-description pre {
+  white-space: pre-wrap;
+  margin: 0;
+  color: var(--text-color);
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.keywords-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.keywords-section h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.keyword-tip {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.keywords-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword-badge {
+  background-color: rgba(232, 122, 65, 0.15);
+  color: var(--kavia-orange);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+}
+
+.resume-view-section h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.view-tabs {
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.view-tab {
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.view-tab:hover {
+  color: var(--text-color);
+}
+
+.view-tab.active {
+  color: var(--kavia-orange);
+}
+
+.view-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--kavia-orange);
+}
+
+.view-tab:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.resume-content {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.resume-preview {
+  white-space: pre-wrap;
+  margin: 0;
+  color: var(--text-color);
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.download-section {
+  text-align: right;
+}
+
+.download-btn {
+  background-color: var(--kavia-orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.download-btn:before {
+  content: "⬇";
+  font-size: 1.2rem;
+}
+
+.download-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 600px) {
+  .job-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .job-select {
+    width: 100%;
+  }
+  
+  .view-job-btn {
+    width: 100%;
+  }
+}
