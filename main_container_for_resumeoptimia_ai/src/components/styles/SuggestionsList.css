@@ -1,0 +1,216 @@
+.suggestions-list-container {
+  background-color: var(--kavia-dark);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.suggestions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.suggestions-header h2 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.suggestions-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.select-all-btn {
+  background-color: transparent;
+  border: 1px solid var(--kavia-orange);
+  color: var(--kavia-orange);
+}
+
+.select-all-btn:hover {
+  background-color: rgba(232, 122, 65, 0.1);
+}
+
+.apply-btn {
+  background-color: var(--kavia-orange);
+}
+
+.apply-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.filter-tabs {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 4px;
+  padding-bottom: 1px;
+}
+
+.filter-tab {
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  position: relative;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-tab:hover {
+  color: var(--text-color);
+}
+
+.filter-tab.active {
+  color: var(--kavia-orange);
+}
+
+.filter-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--kavia-orange);
+}
+
+.no-suggestions {
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  padding: 24px;
+}
+
+.suggestions-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-item {
+  display: flex;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+}
+
+.suggestion-checkbox {
+  display: block;
+  position: relative;
+  margin-right: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.suggestion-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  height: 24px;
+  width: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.suggestion-checkbox:hover input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.suggestion-checkbox input:checked ~ .checkmark {
+  background-color: var(--kavia-orange);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.suggestion-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.suggestion-priority-marker {
+  width: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.priority-high .suggestion-priority-marker {
+  background-color: #dc3545;
+}
+
+.priority-medium .suggestion-priority-marker {
+  background-color: #ffc107;
+}
+
+.priority-low .suggestion-priority-marker {
+  background-color: #28a745;
+}
+
+.suggestion-content {
+  padding-left: 12px;
+  flex: 1;
+}
+
+.suggestion-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.suggestion-content p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 600px) {
+  .suggestions-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .suggestions-actions {
+    width: 100%;
+  }
+  
+  .suggestions-actions button {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .filter-tabs {
+    padding-bottom: 8px;
+  }
+}
