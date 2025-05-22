@@ -1,0 +1,170 @@
+.resume-analysis-container {
+  background-color: var(--kavia-dark);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.resume-analysis-container h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--text-color);
+}
+
+.score-overview {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.score-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-90deg);
+}
+
+.score-inner-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--kavia-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.score-details {
+  flex: 1;
+}
+
+.score-details h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.score-details p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.optimize-btn {
+  background-color: var(--kavia-orange);
+  padding: 12px 24px;
+  font-weight: 500;
+}
+
+.sections-analysis {
+  margin-bottom: 32px;
+}
+
+.sections-analysis h3 {
+  margin-bottom: 16px;
+}
+
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.section-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.section-card h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.section-score {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mini-score-bar {
+  flex: 1;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mini-score-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.improvement-suggestions h3 {
+  margin-bottom: 16px;
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestion-item {
+  display: flex;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+}
+
+.suggestion-priority-marker {
+  width: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.priority-high .suggestion-priority-marker {
+  background-color: #dc3545;
+}
+
+.priority-medium .suggestion-priority-marker {
+  background-color: #ffc107;
+}
+
+.priority-low .suggestion-priority-marker {
+  background-color: #28a745;
+}
+
+.suggestion-content {
+  padding-left: 12px;
+}
+
+.suggestion-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.suggestion-content p {
+  margin: 0;
+  color: var(--text-color);
+}
