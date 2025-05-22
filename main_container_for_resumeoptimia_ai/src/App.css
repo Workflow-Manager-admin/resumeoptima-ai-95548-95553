@@ -4,6 +4,10 @@
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --section-bg: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -55,8 +59,13 @@ body {
   box-sizing: border-box;
 }
 
+.main-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
 .hero {
-  padding-top: 120px;
+  padding-top: 40px;
   padding-bottom: 64px;
   text-align: center;
   display: flex;
@@ -72,7 +81,7 @@ body {
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
@@ -105,4 +114,111 @@ body {
 .btn-large {
   padding: 12px 24px;
   font-size: 1.1rem;
+}
+
+.app-footer {
+  margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 24px 0;
+}
+
+.app-footer p {
+  margin: 8px 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-disclaimer {
+  margin-top: 16px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+  font-size: 0.8rem;
+}
+
+/* Progress steps */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step:not(:last-child):after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-color);
+  top: 15px;
+  left: 50%;
+  z-index: 0;
+}
+
+.step.active:not(:last-child):after {
+  background-color: var(--kavia-orange);
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  z-index: 1;
+  margin-bottom: 8px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.step.active .step-number {
+  background-color: var(--kavia-orange);
+}
+
+.step-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.step.active .step-label {
+  color: var(--kavia-orange);
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .btn-large {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 100%;
+  }
 }
